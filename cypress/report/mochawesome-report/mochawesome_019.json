@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-27T13:30:38.060Z",
+    "end": "2022-10-27T13:31:04.875Z",
+    "duration": 26815,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "16f5761d-3939-4bd3-a226-2958d360a98b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\demo.spec.js",
+      "file": "cypress\\e2e\\demo.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8fa0f088-e3a1-46f4-bcfb-4d4cce1feffb",
+          "title": "let's start our demo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Orange HRM Site",
+              "fullTitle": "let's start our demo Orange HRM Site",
+              "timedOut": null,
+              "duration": 18050,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\");\ncy.get('input[name=\"username\"]').type(\"Admin\");\ncy.get('input[name=\"password\"]').type(\"admin123\");\ncy.get('button[type=\"submit\"]').click();",
+              "err": {},
+              "uuid": "f71f4fd0-a246-46eb-8a42-b1f7acdd513b",
+              "parentUUID": "8fa0f088-e3a1-46f4-bcfb-4d4cce1feffb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f71f4fd0-a246-46eb-8a42-b1f7acdd513b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18050,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

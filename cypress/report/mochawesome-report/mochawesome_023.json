@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-10-27T13:32:09.025Z",
+    "end": "2022-10-27T13:32:10.137Z",
+    "duration": 1112,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "f58d65bf-7f34-4c84-96dc-b39409b65993",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.js",
+      "file": "cypress\\e2e\\login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7edcbce4-7a7e-40fe-832d-ec9074c65557",
+          "title": "try testing this - netlify app",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login valid username and password ",
+              "fullTitle": "try testing this - netlify app login valid username and password ",
+              "timedOut": null,
+              "duration": 1018,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "LoginPage.enterUsername('test');\nLoginPage.enterPassword('test');\nLoginPage.clickLogin();\ncy.contains('Login Successful');\ncy.contains('here').click();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://trytestingthis.netlify.app/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo EAI_AGAIN trytestingthis.netlify.app\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `try testing this - netlify app`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://trytestingthis.netlify.app/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo EAI_AGAIN trytestingthis.netlify.app\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `try testing this - netlify app`\n    at <unknown> (http://localhost:50470/__cypress/runner/cypress_runner.js:142216:82)\n    at visitFailedByErr (http://localhost:50470/__cypress/runner/cypress_runner.js:141504:12)\n    at <unknown> (http://localhost:50470/__cypress/runner/cypress_runner.js:142215:11)\n    at tryCatcher (http://localhost:50470/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:50470/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:50470/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:50470/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:50470/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:50470/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:50470/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:50470/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:50470/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at loginPage.navigate (webpack:///./cypress/support/pages/loginPage.js:11:11)\n    at Context.eval (webpack:///./cypress/e2e/login.js:9:18)\n\nFrom Node.js Internals:\n  Error: getaddrinfo EAI_AGAIN trytestingthis.netlify.app\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)",
+                "diff": null
+              },
+              "uuid": "47e2df9e-394a-44ea-b896-83cbb63c8b25",
+              "parentUUID": "7edcbce4-7a7e-40fe-832d-ec9074c65557",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login invalid username and valid password ",
+              "fullTitle": "try testing this - netlify app login invalid username and valid password ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "LoginPage.enterUsername('testtest');\nLoginPage.enterPassword('test');\nLoginPage.clickLogin();\ncy.on('window:alert', txt => {\n  expect(txt).to.be.equal('Wrong Credentials! Try again!');\n});",
+              "err": {},
+              "uuid": "a05ddcd7-3853-4bfd-b5c7-22b4104a0318",
+              "parentUUID": "7edcbce4-7a7e-40fe-832d-ec9074c65557",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "login valid username and invalid password ",
+              "fullTitle": "try testing this - netlify app login valid username and invalid password ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "LoginPage.enterUsername('test');\nLoginPage.enterPassword('test123');\nLoginPage.clickLogin();\ncy.on('window:alert', txt => {\n  expect(txt).to.be.equal('Wrong Credentials! Try again!');\n});",
+              "err": {},
+              "uuid": "8d678fe5-547f-40d2-a1c9-4c82c505fa7e",
+              "parentUUID": "7edcbce4-7a7e-40fe-832d-ec9074c65557",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "47e2df9e-394a-44ea-b896-83cbb63c8b25"
+          ],
+          "pending": [],
+          "skipped": [
+            "a05ddcd7-3853-4bfd-b5c7-22b4104a0318",
+            "8d678fe5-547f-40d2-a1c9-4c82c505fa7e"
+          ],
+          "duration": 1018,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
