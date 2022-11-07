@@ -25,6 +25,7 @@
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
+    "mysql": "^2.18.1"
   }
 }
