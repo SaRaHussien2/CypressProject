@@ -20,4 +20,6 @@ import './commands'
 // require('./commands')
 
 
-  
+beforeEach(() => {
+    cy.log('I am inside e2e.js file')
+})

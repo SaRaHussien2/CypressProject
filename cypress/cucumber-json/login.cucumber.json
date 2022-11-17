@@ -1,0 +1,112 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "test the login functionality",
+    "line": 1,
+    "id": "test-the-login-functionality",
+    "tags": [],
+    "uri": "login.feature",
+    "elements": [
+      {
+        "id": "test-the-login-functionality;test-login-with-valide-and-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "test login with valide and invalid credentials",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is on login page",
+            "result": {
+              "status": "passed",
+              "duration": 1210000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the user enters 'admin@yourstore.com' and 'admin'",
+            "result": {
+              "status": "passed",
+              "duration": 832000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "The user clicks on login button",
+            "result": {
+              "status": "passed",
+              "duration": 7624000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "The user is navigated to the homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1845000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "test-the-login-functionality;test-login-with-valide-and-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "test login with valide and invalid credentials",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is on login page",
+            "result": {
+              "status": "passed",
+              "duration": 675000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the user enters 'test@test.com' and 'test'",
+            "result": {
+              "status": "passed",
+              "duration": 755000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "The user clicks on login button",
+            "result": {
+              "status": "passed",
+              "duration": 430000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "The user is navigated to the homepage",
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Logout' but never did.\n    at Context.eval (cypress/e2e/cucumber-tests/login/loginSteps.js:18:7)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

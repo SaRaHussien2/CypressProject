@@ -6,6 +6,7 @@
   "scripts": {
     "pretest": "rimraf -r ./cypress/report/*.json",
     "test": "npm run cypress-test || npm run posttest",
+    "logs": "echo hello",
     "cypress-test": "cypress run",
     "posttest": "npm run merge-reports && npm run generate-htmlreport",
     "merge-reports": "mochawesome-merge ./cypress/report/*.json > ./report.json",
@@ -25,7 +26,19 @@
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-file-upload": "^5.0.8",
+    "multiple-cucumber-html-reporter": "^3.0.1",
     "mysql": "^2.18.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/cucumber-tests/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }

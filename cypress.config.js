@@ -1,6 +1,6 @@
 const { defineConfig } = require("cypress");
 const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
-
+const cucumber = require('cypress-cucumber-preprocessor').default
 
 //For connecting to SQL Server
 const mysql = require('mysql')
@@ -26,6 +26,8 @@ module.exports = defineConfig({
   defaultCommandTimeout: 5000,
   viewportWidth: 1920,
   viewportHeight: 1080,
+
+  // Connect with freesqldatabase website to test a database integration with cypress
   projectId: "qx4b9b",
   env: {
     db: {
@@ -38,12 +40,12 @@ module.exports = defineConfig({
 
 
   e2e: {
-    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
+    specPattern: "cypress/e2e/**/*.{feature,js,jsx,ts,tsx}",
     excludeSpecPattern: ["**/1-getting-started/*", "**/2-advanced-examples/*"],
 
-    defaultCommandTimeout:4000,
-    watchForFileChanges:false,
-    
+    defaultCommandTimeout: 4000,
+    watchForFileChanges: false,
+
     reporter: "mochawesome",
     reporterOptions: {
       charts: true,
@@ -59,12 +61,14 @@ module.exports = defineConfig({
 
     setupNodeEvents(on, config) {
       on('task', { downloadFile });
+      on('file:preprocessor', cucumber());
 
       //For running sql query
       on('task', {
         queryDb: query => {
           return queryTestDb(query, config)
         },
+
       });
 
       // on("before:browser:launch", (browser = {}, launchOptions) => {
