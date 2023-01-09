@@ -22,7 +22,7 @@
             "name": "user is on login page",
             "result": {
               "status": "passed",
-              "duration": 1210000000
+              "duration": 1220000000
             }
           },
           {
@@ -32,7 +32,7 @@
             "name": "the user enters 'admin@yourstore.com' and 'admin'",
             "result": {
               "status": "passed",
-              "duration": 832000000
+              "duration": 846000000
             }
           },
           {
@@ -42,7 +42,7 @@
             "name": "The user clicks on login button",
             "result": {
               "status": "passed",
-              "duration": 7624000000
+              "duration": 7844000000
             }
           },
           {
@@ -52,7 +52,7 @@
             "name": "The user is navigated to the homepage",
             "result": {
               "status": "passed",
-              "duration": 1845000000
+              "duration": 2978000000
             }
           }
         ]
@@ -72,7 +72,7 @@
             "name": "user is on login page",
             "result": {
               "status": "passed",
-              "duration": 675000000
+              "duration": 586000000
             }
           },
           {
@@ -82,7 +82,7 @@
             "name": "the user enters 'test@test.com' and 'test'",
             "result": {
               "status": "passed",
-              "duration": 755000000
+              "duration": 740000000
             }
           },
           {
@@ -92,7 +92,7 @@
             "name": "The user clicks on login button",
             "result": {
               "status": "passed",
-              "duration": 430000000
+              "duration": 390000000
             }
           },
           {
@@ -102,7 +102,7 @@
             "name": "The user is navigated to the homepage",
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Logout' but never did.\n    at Context.eval (cypress/e2e/cucumber-tests/login/loginSteps.js:18:7)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Logout' but never did.\n    at Context.eval (cypress/e2e/cucumber-tests/login/loginSteps.js:19:7)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
             }
           }
         ]

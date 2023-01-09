@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-02T07:51:49.201Z",
+    "end": "2023-01-02T07:51:49.368Z",
+    "duration": 167,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f884b87c-a340-428c-b849-d59c899b45a8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\FileHandling\\readWriteFile.spec.js",
+      "file": "cypress\\e2e\\FileHandling\\readWriteFile.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39f68249-6f3e-4f27-9380-858caa8d443f",
+          "title": "read write file tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Write file ",
+              "fullTitle": "read write file tests Write file ",
+              "timedOut": null,
+              "duration": 141,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.writeFile('sample.txt', 'Hello, we are learning Cypress');\n// { flag: 'a+' } ==>  to append  to the file whatever exists\ncy.writeFile('sample.txt', '\\nHi, I am SaRa', {\n  flag: 'a+'\n});\ncy.readFile('sample.txt').should('contain', 'Cypress');",
+              "err": {},
+              "uuid": "0b02151b-91bd-4f5f-aade-958746c1ca3c",
+              "parentUUID": "39f68249-6f3e-4f27-9380-858caa8d443f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0b02151b-91bd-4f5f-aade-958746c1ca3c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 141,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

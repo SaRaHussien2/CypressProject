@@ -31,10 +31,10 @@ module.exports = defineConfig({
   projectId: "qx4b9b",
   env: {
     db: {
-      host: "sql12.freesqldatabase.com",
-      user: "sql12531525",
-      password: "NHuikEG1Qj",
-      database: "sql12531525"
+      host: "sql7.freesqldatabase.com",
+      user: "sql7586871",
+      password: "BxHutxGnhW",
+      database: "sql7586871"
     }
   },
 
@@ -52,7 +52,7 @@ module.exports = defineConfig({
       overwrite: false,
       html: false,
       json: true,
-      reportDir: "cypress/report/mochawesome-report"
+      reportDir: "cypress/report/mochawesome-reports"
     },
 
     //Cypress Studio is an app (feature) that allows you to record tests on browser

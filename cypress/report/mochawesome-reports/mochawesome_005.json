@@ -1,0 +1,260 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-02T07:50:47.350Z",
+    "end": "2023-01-02T07:50:49.066Z",
+    "duration": 1716,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "df8cbcf1-2b45-4700-96fe-f53a87fbef35",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api\\api_tests.spec.js",
+      "file": "cypress\\e2e\\api\\api_tests.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a91dd47-54ed-4254-82ad-796d16b9704d",
+          "title": "Test the Get method of Api request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get 1",
+              "fullTitle": "Test the Get method of Api request Get 1",
+              "timedOut": null,
+              "duration": 561,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', '/users?page=2').then(function (response) {\n  expect(response.status).to.equal(200), expect(response).to.have.property('status', 200), expect(response.body).not.to.be[\"null\"], expect(response.body).to.have.property('page', 2), expect(response.body.data).to.have.length(6);\n});",
+              "err": {},
+              "uuid": "71c9fc8a-faac-4cb4-a449-3b084d596c94",
+              "parentUUID": "3a91dd47-54ed-4254-82ad-796d16b9704d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get 2",
+              "fullTitle": "Test the Get method of Api request Get 2",
+              "timedOut": null,
+              "duration": 153,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', '/users?page=2').as('user_list');\ncy.get('@user_list').should(function (response) {\n  expect(response.status).to.equal(200), expect(response).to.have.property('status', 200), expect(response.body).not.to.be[\"null\"], expect(response.body).to.have.property('page', 2), expect(response.body.data).to.have.length(6);\n});",
+              "err": {},
+              "uuid": "cfc15113-8fe4-4bb4-8a32-b8592755fce6",
+              "parentUUID": "3a91dd47-54ed-4254-82ad-796d16b9704d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get 3",
+              "fullTitle": "Test the Get method of Api request Get 3",
+              "timedOut": null,
+              "duration": 130,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  'method': 'GET',\n  'url': '/users?page=2',\n  headers: {\n    'Content-Type': 'application/json'\n  }\n}).then(function (response) {\n  expect(response.status).to.equal(200), expect(response).to.have.property('status', 200), expect(response.body).not.to.be[\"null\"], expect(response.body).to.have.property('page', 2), expect(response.body.data).to.have.length(6);\n});",
+              "err": {},
+              "uuid": "86ad86c2-1661-4aca-b534-336cdb67ec12",
+              "parentUUID": "3a91dd47-54ed-4254-82ad-796d16b9704d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "71c9fc8a-faac-4cb4-a449-3b084d596c94",
+            "cfc15113-8fe4-4bb4-8a32-b8592755fce6",
+            "86ad86c2-1661-4aca-b534-336cdb67ec12"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 844,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e1d0051f-85cf-4685-b315-0d791084d8f6",
+          "title": "Test the POST method of Api request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST 1",
+              "fullTitle": "Test the POST method of Api request POST 1",
+              "timedOut": null,
+              "duration": 210,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  'method': 'POST',\n  'url': '/users',\n  body: {\n    \"name\": \"SaRa\",\n    \"job\": \"Tester\"\n  }\n}).then(function (response) {\n  expect(response).to.have.property('status', 201);\n  expect(response.status).to.equal(201);\n  expect(response.body).not.to.be[\"null\"];\n  expect(response.body).to.have.property('name', 'SaRa');\n});",
+              "err": {},
+              "uuid": "a608bdb5-6f08-4d5e-91af-b7da0714089d",
+              "parentUUID": "e1d0051f-85cf-4685-b315-0d791084d8f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST 2",
+              "fullTitle": "Test the POST method of Api request POST 2",
+              "timedOut": null,
+              "duration": 199,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var reqBody = {\n  \"name\": \"SaRa\",\n  \"job\": \"Tester\"\n};\ncy.request('POST', '/users', reqBody).then(function (response) {\n  expect(response).to.have.property('status', 201);\n  expect(response.status).to.equal(201);\n  expect(response.body).not.to.be[\"null\"];\n  expect(response.body).to.have.property('name', 'SaRa');\n});",
+              "err": {},
+              "uuid": "68219101-0a5e-4a29-97f0-e7982dd51b8a",
+              "parentUUID": "e1d0051f-85cf-4685-b315-0d791084d8f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a608bdb5-6f08-4d5e-91af-b7da0714089d",
+            "68219101-0a5e-4a29-97f0-e7982dd51b8a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 409,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "64c3978f-30ef-4e57-9e8f-a443f6c4ab59",
+          "title": "Put and Delete",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "PUT",
+              "fullTitle": "Put and Delete PUT",
+              "timedOut": null,
+              "duration": 225,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  'method': 'PUT',\n  'url': '/users/2',\n  body: {\n    \"name\": \"Yara\",\n    \"job\": \"Student\"\n  }\n}).then(function (response) {\n  expect(response).to.have.property('status', 200);\n  expect(response.status).to.equal(200);\n  expect(response.body).not.to.be[\"null\"];\n  expect(response.body).to.have.property('name', 'Yara');\n});",
+              "err": {},
+              "uuid": "2d8bda5f-c4a8-4af0-ba2a-a36aa8b4295e",
+              "parentUUID": "64c3978f-30ef-4e57-9e8f-a443f6c4ab59",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete",
+              "fullTitle": "Put and Delete Delete",
+              "timedOut": null,
+              "duration": 193,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('Delete', '/users/2').then(function (response) {\n  expect(response).to.have.property('status', 204);\n  expect(response.status).to.equal(204);\n  expect(response.body).not.to.be[\"null\"];\n  expect(response.body).not.to.have.property('name', 'Yara');\n});",
+              "err": {},
+              "uuid": "f2d6fcac-39f0-41fc-be7f-6a83432b82e6",
+              "parentUUID": "64c3978f-30ef-4e57-9e8f-a443f6c4ab59",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2d8bda5f-c4a8-4af0-ba2a-a36aa8b4295e",
+            "f2d6fcac-39f0-41fc-be7f-6a83432b82e6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 418,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
